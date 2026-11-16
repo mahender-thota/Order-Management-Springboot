@@ -1,9 +1,9 @@
 package com.sb.service.impl;
 
 import com.sb.dao_repo.ItemRepository;
-import com.sb.dto.ItemRequestDTO;
-import com.sb.dto.ItemResponseDTO;
-import com.sb.dto.UpadateItemRequestDTO;
+import com.sb.dto.item.ItemRequestDTO;
+import com.sb.dto.item.ItemResponseDTO;
+import com.sb.dto.item.UpadateItemRequestDTO;
 import com.sb.model.Item;
 import com.sb.service.ItemService;
 import org.springframework.beans.BeanUtils;

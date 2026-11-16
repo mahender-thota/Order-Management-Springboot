@@ -1,8 +1,8 @@
 package com.sb.service;
 
-import com.sb.dto.ItemRequestDTO;
-import com.sb.dto.ItemResponseDTO;
-import com.sb.dto.UpadateItemRequestDTO;
+import com.sb.dto.item.ItemRequestDTO;
+import com.sb.dto.item.ItemResponseDTO;
+import com.sb.dto.item.UpadateItemRequestDTO;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.sb.controller;
 
-import com.sb.dto.ItemRequestDTO;
-import com.sb.dto.ItemResponseDTO;
-import com.sb.dto.UpadateItemRequestDTO;
+import com.sb.dto.item.ItemRequestDTO;
+import com.sb.dto.item.ItemResponseDTO;
+import com.sb.dto.item.UpadateItemRequestDTO;
 import com.sb.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

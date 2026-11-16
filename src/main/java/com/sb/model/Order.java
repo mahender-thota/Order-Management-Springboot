@@ -1,5 +1,6 @@
 package com.sb.model;
 
+import com.sb.constants.OrderStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "orders")
+@Builder
 public class Order {
 
     @Id
@@ -21,17 +23,16 @@ public class Order {
     private LocalDate dateOfOrder;
     private int numberOfItems;
     private double totalPrice;
-    private String orderStatus;
+    private OrderStatus orderStatus;
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderItem> orderItems;
 
-    public Order(String name, LocalDate dateOfOrder, int numberOfItems, double totalPrice, String orderStatus, List<OrderItem> orderItems) {
+    public Order(String name, LocalDate dateOfOrder, int numberOfItems, double totalPrice, OrderStatus orderStatus) {
         this.name = name;
         this.dateOfOrder = dateOfOrder;
         this.numberOfItems = numberOfItems;
         this.totalPrice = totalPrice;
         this.orderStatus = orderStatus;
-        this.orderItems = orderItems;
     }
 
     @Override

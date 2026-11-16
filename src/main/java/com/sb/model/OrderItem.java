@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "orderitems")
+@Builder
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +25,11 @@ public class OrderItem {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    public OrderItem(Item item, double orderItemPrice, double orderItemQuantity, int discount, Order order) {
-        this.item = item;
+    public OrderItem( double orderItemPrice, double orderItemQuantity, int discount) {
         this.orderItemPrice = orderItemPrice;
         this.orderItemQuantity = orderItemQuantity;
         this.discount = discount;
-        this.order = order;
+
     }
 
     @Override

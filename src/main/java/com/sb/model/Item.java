@@ -9,17 +9,15 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "items")
+@Builder
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long itemId;
-
-    @Column(nullable = false)
+    @Column(nullable = false , name="item_name")
     private String itemName;
-
     private String catagory;
-
     @Column(nullable = false)
     private double price;
     private String brand;

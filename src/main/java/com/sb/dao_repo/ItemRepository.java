@@ -1,6 +1,5 @@
 package com.sb.dao_repo;
 
-import com.sb.dto.ItemResponseDTO;
 import com.sb.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

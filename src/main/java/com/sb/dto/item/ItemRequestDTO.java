@@ -1,9 +1,5 @@
-package com.sb.dto;
+package com.sb.dto.item;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,14 +7,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemResponseDTO {
+public class ItemRequestDTO {
 
-    private long itemId;
     private String itemName;
     private String catagory;
     private double price;
     private String brand;
     private int quantity;
     private int discount;
-    private double rating;
+
 }
